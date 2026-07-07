@@ -1,0 +1,578 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background:#222;
+  color:white;
+}
+
+
+/* Home Page */
+
+/* Home Page Design */
+
+.home{
+
+height:100vh;
+
+width:100%;
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* Dark Glass Effect */
+
+.home::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+height:100%;
+
+width:100%;
+
+background:rgba(0,0,0,0.55);
+
+}
+
+
+.home-content{
+
+position:relative;
+
+text-align:center;
+
+color:white;
+
+padding:40px;
+
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(8px);
+
+border-radius:25px;
+
+}
+
+
+.home-content h1{
+
+font-size:65px;
+
+font-weight:bold;
+
+}
+
+
+.home-content span{
+
+background:linear-gradient(
+45deg,
+#00e5ff,
+#00ff88
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+.home-content p{
+
+font-size:28px;
+
+}
+
+
+.home-content h3{
+
+font-size:25px;
+
+}
+/* Event Section */
+
+.events{
+  padding:50px;
+  text-align:center;
+}
+
+.events h1{
+  font-size:35px;
+  margin-bottom:30px;
+}
+
+/* Event Card Design */
+
+.card{
+  width:300px;
+  padding:20px;
+  margin:20px auto;
+  border-radius:15px;
+  box-shadow:0px 4px 12px rgba(0,0,0,0.2);
+  background:white;
+}
+
+.card h2{
+  color:#222;
+}
+
+.card p{
+  color:#555;
+}
+
+.card button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#222;
+  color:white;
+  cursor:pointer;
+}
+
+.card button:hover{
+  background:#444;
+}
+.events input{
+
+  width:300px;
+
+  padding:12px;
+
+  border-radius:20px;
+
+  border:1px solid gray;
+
+  margin-bottom:30px;
+
+}
+.filters{
+  margin:20px;
+}
+
+.filters button{
+
+  margin:10px;
+
+  padding:10px 20px;
+
+  border:none;
+
+  border-radius:20px;
+
+  background:#222;
+
+  color:white;
+
+  cursor:pointer;
+}
+
+.filters button:hover{
+
+  background:#555;
+
+}
+.register{
+
+text-align:center;
+
+padding:50px;
+
+}
+
+
+.register form{
+
+display:flex;
+
+flex-direction:column;
+
+width:300px;
+
+margin:auto;
+
+gap:15px;
+
+}
+
+
+.register input{
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid gray;
+
+}
+.register select{
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid gray;
+
+}
+
+.register button{
+
+padding:12px;
+
+background:#222;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+}
+.event-img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+transition:0.3s;
+
+}
+.footer{
+
+background:#222;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+margin-top:40px;
+
+}
+/* Mobile Responsive Design */
+
+@media(max-width:768px){
+
+
+/* Navbar */
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 60px;
+
+background:#111;
+
+position:relative;
+
+}
+
+
+/* EventHub Logo */
+
+.logo{
+
+font-size:45px;
+
+font-weight:900;
+
+letter-spacing:2px;
+
+color:white;
+
+}
+
+
+.logo span{
+
+color:#00e5ff;
+
+}
+.logo span{
+
+color:white;
+
+}
+
+
+
+/* Three Line Menu */
+
+.menu{
+
+display:block;
+
+font-size:40px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+/* Hide Menu Items */
+
+.nav-links{
+
+display:none;
+
+list-style:none;
+
+position:absolute;
+
+top:100px;
+
+right:30px;
+
+background:#222;
+
+width:220px;
+
+padding:25px 0;
+
+border-radius:15px;
+
+z-index:100;
+
+}
+.nav-links li{
+
+width:100%;
+
+text-align:center;
+
+}
+
+
+/* Show after clicking ☰ */
+
+.nav-links.active{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+
+.nav-links a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+}
+
+
+.nav-links a:hover{
+
+color:#00e5ff;
+
+}
+
+.home{
+
+padding:50px 20px;
+
+}
+
+
+.home h1{
+
+font-size:32px;
+
+}
+
+
+.card{
+
+width:90%;
+
+}
+
+
+.events input{
+
+width:90%;
+
+}
+
+
+.register form{
+
+width:90%;
+
+}
+
+}
+/* Navbar Link Design */
+
+.navbar a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+
+.navbar a:hover{
+
+color:#ddd;
+
+}
+
+
+/* Better Mobile Navbar */
+
+@media(max-width:768px){
+
+.navbar h2{
+
+margin-bottom:20px;
+
+}
+
+
+
+}
+/* Final Hamburger Fix */
+
+.nav-links{
+
+display:none !important;
+
+position:absolute;
+
+top:110px;
+
+right:30px;
+
+background:#222;
+
+width:230px;
+
+padding:25px 0;
+
+border-radius:15px;
+
+list-style:none;
+
+z-index:999;
+
+}
+
+
+.nav-links.active{
+
+display:flex !important;
+
+flex-direction:column !important;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+
+.nav-links li{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+}
+
+
+.nav-links a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:22px;
+
+}
+/* FINAL EVENTHUB LOGO DESIGN ONLY */
+
+.logo{
+
+font-size:50px !important;
+
+font-weight:900 !important;
+
+letter-spacing:2px;
+
+color:white !important;
+
+text-shadow:
+0px 0px 10px rgba(255,255,255,0.5);
+
+}
+
+
+/* Hub word color */
+
+.logo span{
+
+color:#00e5ff !important;
+
+text-shadow:
+0px 0px 15px #00e5ff;
+
+}
