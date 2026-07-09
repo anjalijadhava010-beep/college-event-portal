@@ -1,8 +1,9 @@
+import "./App.css";
 import Footer from "./components/Footer"
 import MyRegistration from "./pages/MyRegistration"
 import Register from "./pages/Register"
 import EventDetails from "./pages/EventDetails"
-import "./App.css"
+
 
 import { Routes, Route } from "react-router-dom"
 
